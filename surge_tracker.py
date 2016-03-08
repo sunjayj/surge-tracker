@@ -1,4 +1,4 @@
-from api_header import *
+from api_header import client
 import json
 
 def getprice(product,start_latitude,start_longitude,end_latitude,end_longitude):
