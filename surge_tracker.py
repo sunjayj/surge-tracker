@@ -1,8 +1,8 @@
 from api_header import client
 import json
 
-def getprice(product,start_latitude,start_longitude,end_latitude,end_longitude):
-	response = client.get_price_estimates(start_latitude, start_longitude,end_latitude,end_longitude)
+def getprice(product, start_latitude, start_longitude, end_latitude, end_longitude):
+	response = client.get_price_estimates(start_latitude, start_longitude, end_latitude, end_longitude)
 	data = response.json
 	prices = data.get('prices')
 
@@ -17,7 +17,7 @@ def getprice(product,start_latitude,start_longitude,end_latitude,end_longitude):
 	return (low_price, high_price, surge)
 
 #Seattle - Belltown
-low_price, high_price, surge = getprice('uberX', 47.620087, -122.347223, 47.618034, -122.338940)
+low_price, high_price, surge = getprice('uberX', 47.618417, -122.347950, 47.618034, -122.338940)
 
 #Seattle - Capitol Hill
 #low_price, high_price, surge = getprice('uberX',47.615035, -122.322938, 47.618034, -122.338940)
